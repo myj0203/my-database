@@ -4,6 +4,10 @@
 	- 删除Cookie
 - 根据第一步，我们先写好框架
   ```tsx
+  const useCookie = () => {
   
+  	return [cookie, updateCookie, deleteCookie]
+  }
   ```
+-
 -
