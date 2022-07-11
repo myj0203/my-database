@@ -13,21 +13,12 @@
  {:block/name "cancelled",
   :block/created-at 1657522754364,
   :block/updated-at 1657522754364}
- {:block/name "card",
-  :block/created-at 1657522754363,
-  :block/updated-at 1657522754363}
- {:block/name "contents",
-  :block/created-at 1657522754363,
-  :block/updated-at 1657522754363}
  {:block/name "doing",
   :block/created-at 1657522754364,
   :block/updated-at 1657522754364}
  {:block/name "done",
   :block/created-at 1657522754364,
   :block/updated-at 1657522754364}
- {:block/name "favorites",
-  :block/created-at 1657522754363,
-  :block/updated-at 1657522754363}
  {:block/name "in-progress",
   :block/created-at 1657522754364,
   :block/updated-at 1657522754364}
@@ -43,6 +34,9 @@
  {:block/name "todo",
   :block/created-at 1657522754364,
   :block/updated-at 1657522754364}
+ {:block/name "usecookie",
+  :block/created-at 1657523011129,
+  :block/updated-at 1657523292533}
  {:block/name "wait",
   :block/created-at 1657522754363,
   :block/updated-at 1657522754363}
