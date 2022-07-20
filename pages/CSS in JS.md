@@ -5,7 +5,7 @@
 - [[@emotion/css]] vs [[@emotion/react]]
 	- > 总结：
 	  普通的样式：`className`需要定义样式时用 [[@emotion/css]] 的css
-	  需要用`styled`、全局样式`Global`、`ssr`时用 [[@emotion/react]] 的css
+	  需要用`styled`、全局样式`Global`时用 [[@emotion/react]] 的css
 	- `@emotion/css` :
 		- use vanilla（原生） react  `className`  prop
 		- no custom jsx parser
