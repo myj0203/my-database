@@ -38,33 +38,30 @@
 		  collapsed:: true
 			- 当一个组件由好几个小组件组成，但用户使用组件时只是简单的使用根组件，那么如何允许用户自定义每个小组件的 className 呢？
 			  可以这样：允许用户可以传入一个 classses 对象，用于分发给各个小组件的 className，从而允许用户自由地覆盖样式。利用上一步在  `packages/components/src/styles/overrides.d.ts`  里维护的映射。
-			- ### 完整参考 demo
-			  ```jsx
+		- ### 完整参考demo
+		  collapsed:: true
+			- ```jsx
 			  import { useUtilityClasses, useThemeProps, styled } from '../styles';
 			  import clsx from 'clsx';
-			  
-			  const Root = styled('div', {
-			    name: 'ImileHello',
-			    slot: 'Root',
-			    overridesResolver: (props, style) => [style.root] // 允许被主题上的 styleOverrides.root 覆盖
+			  - const Root = styled('div', {
+			  name: 'ImileHello',
+			  slot: 'Root',
+			  overridesResolver: (props, style) => [style.root] // 允许被主题上的 styleOverrides.root 覆盖
 			  })({})
-			  
-			  export const Hello = inputProps => {
-			    const props = useThemeProps({ name: 'ImileHello', props: inputProps })  // 合并后的 props
-			    const classes = useUtilityClasses({
-			      name: 'ImileHello',
-			      classes: props.classes,
-			      slots: [
-			        'root'
-			        // ...自定义 slot（小组件）
-			      ]
-			    })
-			  
-			    return (
-			      <Root className={clsx(classes.root, props.className)}>
-			        // ...
-			      </Root>
-			    )
+			  - export const Hello = inputProps => {
+			  const props = useThemeProps({ name: 'ImileHello', props: inputProps })  // 合并后的 props
+			  const classes = useUtilityClasses({
+			  name: 'ImileHello',
+			  classes: props.classes,
+			  slots: [
+			    'root'
+			    // ...自定义 slot（小组件）
+			  ]
+			  })
+			  - return (
+			  <Root className={clsx(classes.root, props.className)}>
+			    // ...
+			  </Root>
+			  )
 			  }
 			  ```
--
