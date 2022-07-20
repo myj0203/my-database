@@ -10,7 +10,11 @@
       defaultProps: {
         // 改变默认的props
       },
-      styleOverrides
+      styleOverrides: {
+        组件名称 || root: {
+          // 样式
+        }
+      }
     }
   }
   ```
