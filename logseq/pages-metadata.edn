@@ -30,7 +30,7 @@
   :block/updated-at 1657524501206}
  {:block/name "css in js",
   :block/created-at 1658237852328,
-  :block/updated-at 1658275348229}
+  :block/updated-at 1658275611879}
  {:block/name "css函数",
   :block/created-at 1658273133678,
   :block/updated-at 1658273133678}
@@ -89,5 +89,8 @@
   :block/created-at 1657522754363,
   :block/updated-at 1657522754363}
  {:block/name "waiting",
-  :block/created-at 1657522754363, 
-  :block/updated-at 1657522754363}]
+  :block/created-at 1657522754363,
+  :block/updated-at 1657522754363}
+ {:block/name "如果写好一个ui组件",
+  :block/created-at 1658281946328, 
+  :block/updated-at 1658282640749}]
