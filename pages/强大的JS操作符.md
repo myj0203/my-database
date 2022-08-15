@@ -37,4 +37,7 @@
 	  a.c ??= 20
 	  console.log(a)     // 输出 { b: 20, c: 10 }
 	  ```
+- ## 3.  非假值判断  !!
+  第一个感叹号是把值转化为bool值，返回的结果是true或者false，所有的假值包括（NaN、0、null、undefined、''）都返回false
+  第二个感叹号再取反
 -
