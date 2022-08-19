@@ -7,5 +7,6 @@
 	      price: number;
 	  }
 	  ```
-	- https://markdowner.net/article/80348744310312960
+	- 枚举类型
+		- 需求：`除了基本信息，还想`
 -
