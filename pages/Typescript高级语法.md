@@ -52,4 +52,11 @@
 	    return (a[axis] + b[axis]) / 2;
 	  }
 	  ```
+## as 类型断言
+	- 需求：为了代码复用，我们希望原来的JS代码能迁移到TS中
+	- ```
+	  const foo = {};
+	  foo.bar = 123; // Error: 'bar' 属性不存在于 ‘{}’
+	  foo.bas = 'hello'; // Error: 'bas' 属性不存在于 '{}'
+	  ```
 -
