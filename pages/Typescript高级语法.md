@@ -12,10 +12,26 @@
 		- 增加type字段
 		  ```
 		  enum GoodType {
-		  	ElectronicProducts,
-		  	Clothing,
-		  	Books,
+		  	ElectronicProducts = 'ElectronicProducts',
+		  	Clothing = 'Clothing',
+		  	Books = 'Books',
 		  }
+		  
+		  interface IGoodsInfo {
+		      name: string;
+		      price: number;
+		      type: keyof typeof GoodType;
+		  }
+		  
+		  function addGoods(good: IGoodsInfo) {
+		  	console.log(good)
+		  }
+		  
+		  addGoods({ 
+		      name: 'iphone',
+		      price: 8888,
+		      type: GoodType.ElectronicProducts
+		  });
 		  
 		  ```
 -
