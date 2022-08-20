@@ -53,10 +53,23 @@
 	  }
 	  ```
 ## as 类型断言
-	- 需求：为了代码复用，我们希望原来的JS代码能迁移到TS中
+	- > 需求：为了代码复用，我们希望原来的JS代码能迁移到TS中
 	- ```
 	  const foo = {};
 	  foo.bar = 123; // Error: 'bar' 属性不存在于 ‘{}’
 	  foo.bas = 'hello'; // Error: 'bas' 属性不存在于 '{}'
 	  ```
+	- 使用 as 关键字，断言类型：
+	- ```
+	  interface Foo {
+	       bar: number;
+	       bas: string;
+	  }
+	  const foo = {} as Foo;
+	  foo.bar = 123;
+	  foo.bas = 'hello';
+	  ```
+	- > 需要注意的是，除了代码迁移用到 as 语法，大部分其他场景应该避免使用，类型断言纯粹是编译时语法。类型推断应该尽量使用 interface / type / 基础类型。（断言被认为是有害的）
+- ## 工具泛型
+	-
 -
