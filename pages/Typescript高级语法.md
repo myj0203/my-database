@@ -35,4 +35,21 @@
 		  
 		  ```
 -
+- ## keyof 关键字
+	- > 需求：有些贵重商品需要线下交易、方便验货等
+	- `keyof`  有点像  `Object.keys`  不过  `keyof`  取的是  `interface`  的键（Key）,比如下面这样：
+	- ```
+	  interface IPoint {
+	    x: number;
+	    y: number;
+	  }
+	  // 等同于 type Axis = "x" | "y"
+	  type Axis = keyof IPoint;
+	  ```
+	- 计算线段中点坐标值，具体哪个坐标轴可选
+	  ```
+	  function cal(a: IPoint, b: IPoint, axis: Axis): number {
+	    return (a[axis] + b[axis]) / 2;
+	  }
+	  ```
 -
