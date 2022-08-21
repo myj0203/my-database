@@ -105,4 +105,28 @@
 	  type Required<T> = { [P in keyof T]-?: T[P] };
 	  ```
 ## Readonly
-	-
+	- > 需求：闲鱼上有商品信息（价格等），避免程序员错误地在客户端修改
+	- Readonly 将传入的属性变为只读选项，ts 原理如下：
+	  ```tsx
+	  type Readonly<T> = { readonly [P in keyof T]: T[P] };
+	  ```
+	- 可以这样解决：
+	- ```tsx
+	  interface IGoodsInfo {
+	  id: string;
+	  price: number;
+	  description: string;
+	  images: string[];
+	  }
+	  type RGoodsInfo = Readonly<IGoodsInfo>;
+	  function getGoods(): RGoodsInfo {...}
+	  ```
+## Record
+	- > 需求：一个用户可以发布很多商品，基本信息都一样，但是商品种类很多。为了方便拓展和维护，希望这两部分解耦（种类和基本信息），同时有类型检查
+	  该类型可以将 K 中所有的属性的值转化为 T 类型：
+	  ```tsx
+	  type Record<K extends keyof any, T> = {
+	          [P in K]: T;
+	  };
+	  ```
+	- 上面的需求我们可以这样实现：
