@@ -365,7 +365,7 @@
   
   ``` tsx
   function a(): number {
-  // ...
+  	// ...
   }
   
   const res: number = a();
