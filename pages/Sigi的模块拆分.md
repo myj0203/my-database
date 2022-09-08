@@ -1,16 +1,12 @@
 - 渐进式拆分Module
 	- [Example](https://www.remnote.com/doc/IaiXC15z9TIsuz8oT)
-	  collapsed:: true
 		- 1. 有个页面，一开始只是个没有弹框的页面，所以创建了一个index.module.ts，可能伴随着一个index.service.ts
 		- 2. 后面加了一个弹框，此时弹框的逻辑不是很复杂，所以继续在index.module.ts（此时 500 行）里迭代
 		- 3. 后面弹框内容越来越多，有 2 种选择：
-			- collapsed:: true
-			  1. 由于迭代时间紧张，没精力拆分module，暂时继续在index.module.ts里开发『开发后变 800 行』
+			- 1. 由于迭代时间紧张，没精力拆分module，暂时继续在index.module.ts里开发『开发后变 800 行』
 			  2. 在弹框刚开始开发的时候就划分一个Module给它，后续步骤参考上面剥离思路。同时也建议，最好一开始就拆分Module，不要吝啬新建 Module
 				- 提测或上线后，抽空把index.module.ts里的关于弹框的逻辑都剥离到apply.module.ts（假设这里是一个申请xxx功能）
-				  collapsed:: true
 					- 剥离步骤：
-					  collapsed:: true
 						- 1. 新建apply.module.ts（目标从index.module.ts中剥离 300 行）
 						- 2. **只剥离effect/reducer，先保留state在index.module.ts 不变**，相当于把申请相关的effect/reducer逻辑外包到apply.module.ts
 						- 3. apply.module.ts注入index.module.ts
